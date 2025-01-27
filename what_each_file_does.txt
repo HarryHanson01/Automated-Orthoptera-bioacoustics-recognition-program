@@ -1,0 +1,39 @@
+PSD_plot.py:
+- plots the power spectral density diagram of selected files
+
+event_locater_wav_files.py:
+- uses PSD to identify which files have a high enough power to be classified as an event. Splits a wav file into 3 second chunks deletes any file with a power below a specified threshold. 
+
+
+chirpClassifier.py: 
+ - automatically identies features of my grasshopper and cricket .wav files
+
+Below is how each feature is determined:
+  Peak Frequency (Hz): The peak frequency is determined by finding the frequency with the maximum value in the spectrogram (STFT) of the filtered audio, indicating the dominant frequency of the chirp.
+
+  Lowest Frequency (Hz): The lowest frequency is determined by identifying the frequencies in the spectrogram that have significant energy above a threshold (5% of the maximum energy) and taking the minimum of these frequencies.
+
+  Chirp Rate (chirps/sec): The chirp rate is calculated by detecting the peaks in the RMS energy of the filtered audio signal (indicating chirps) and dividing the total number of detected peaks by the duration of the audio in seconds. This is not accurate it is just my best attempt.
+
+  Average Loudness (dB): The average loudness in decibels is determined by first calculating the RMS energy of the filtered audio at the chirp peaks, then converting the average RMS value to decibels using the rmsToDb() function.
+
+  Background Noise (dB): The background noise in decibels is determined by calculating the average RMS energy of the audio signal at times where no chirps are detected (using the non-chirp indices) and converting this value to decibels. This is not accurate it is just my best attempt, it is less detecting background noise and more just telling when there is no chirping. This may be useful when determining averaging to ensure fairness as some sound files have more chirping then others.
+
+
+chirpClassifierTester.py: 
+- basically chirpClassifier.py but I made it to classify individual files 
+
+
+FeatureVisualisation.ipynb: 
+- for plotting the results of chirpClassifier.py.
+- Also contains all the code I used to test image processing and any openCV code.
+
+testingMLmodels.ipynb:
+- for testing machine learning models on my dataset.
+
+
+fileNamer.py:
+- just to quickly name the files for manual data labelling
+
+UsingTrainedModel.ipynb:
+- Where I am using everything that I have tested
