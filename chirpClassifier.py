@@ -12,11 +12,9 @@ def bandpassFilter(data, lowcut, highcut, sr, order=4):
     return filtfilt(b, a, data)
 
 def rmsToDb(rmsValue):
-    """Convert RMS energy value to decibels."""
     return 20 * np.log10(rmsValue) if rmsValue > 0 else -np.inf  # Avoid log(0)
 
 def extractSpeciesFromFilename(filename):
-    """Extract species name from the filename by splitting at the first underscore."""
     species = filename.split('_')[0]  # Get the part before the first underscore
     return species
 

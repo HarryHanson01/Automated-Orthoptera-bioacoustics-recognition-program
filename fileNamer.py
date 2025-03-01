@@ -11,7 +11,7 @@ def nameFiles(folderPath, species):
     count = 1
     for file in files:
         fileExtension = os.path.splitext(file)[1]
-        newName = f"{species}_{count}{fileExtension}"   # should probably change the name so 'Test' is not included (for all species)
+        newName = f"{species}_{count}{fileExtension}"   
         newPath = os.path.join(folderPath, newName)
 
         if os.path.exists(newPath):
@@ -24,6 +24,6 @@ def nameFiles(folderPath, species):
             print(f"Renamed: {file} -> {newName}")
             count += 1
 
-folderPath = "FilesStoredForLabelling\\NoID10"  
-species = "NoID10"    #make sure to change species tooo
+folderPath = "FilesStoredForLabelling\\BackgroundNoise"  
+species = "BackgroundNoise"    #make sure to change species tooo
 nameFiles(folderPath, species)
