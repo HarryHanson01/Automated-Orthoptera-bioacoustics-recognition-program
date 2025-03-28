@@ -26,7 +26,9 @@ chirpClassifierTester.py:
 
 FeatureVisualisation.ipynb: 
 - for plotting the results of chirpClassifier.py.
+- also plotting cnn results
 - Also contains all the code I used to test image processing and any openCV code.
+- Alot of testing done in this file
 
 testingMLmodels.ipynb:
 - for testing machine learning models on my dataset.
@@ -37,3 +39,20 @@ fileNamer.py:
 
 UsingTrainedModel.ipynb:
 - Where I am using everything that I have tested
+- used for demo
+
+modelTraining.ipynb:
+- this is where I train the model
+  to train the model: 
+    - import libraries
+    - save and process images
+    - train model
+- run all the code to make the model, the files will need to be renamed to your systems needs.
+
+GCDetector.py (and its simultaneous windows):
+- this is a file made to use the model on all the data I was provided
+- the simultaneous window files are to process multiple location's sounds at once
+- these will produce the results as a csv file
+
+combining_GCDetections_to_one_csv.py:
+- combines each location's csv file into one
