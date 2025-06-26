@@ -3,7 +3,7 @@
 
 This project is a deep learning-based system for the **automated identification of Orthoptera** (grasshoppers and crickets) using bioacoustic data. It was developed as part of my undergraduate dissertation at Oxford Brookes University, in collaboration with Blenheim Palace, and achieved a First-Class grade.
 
-The system processes `.wav` audio recordings, applies signal processing to detect relevant acoustic events (chirps), and uses CNN-based image classification to recognize species from spectrograms by looking at the different patterns of energy distribution.
+The system processes `.wav` audio recordings, applies signal processing to detect relevant acoustic events (chirps), and uses CNN-based image classification to recognise species from spectrograms by looking at the different patterns of energy distribution.
 
 Disclaimers:
 - This project was created as part of a BSc Computer Science dissertation at Oxford Brookes University and is provided for **educational and research purposes only**.
